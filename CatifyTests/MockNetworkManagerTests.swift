@@ -31,7 +31,7 @@ final class MockNetworkManagerTests: XCTestCase {
         
         let request = Request(path: "https://mockurl", method: .get, contentType: "application/json", headerParams: nil, type: .cats, body: nil)
         
-        networkManager.execute(request: request, completion: { [weak self](result: (Result<[CatBreed], NetworkError>)) in
+        networkManager.execute(request: request, completion: { [weak self](result: (Result<[CatBreedModel], NetworkError>)) in
             if let sessionUrl = self?.session.lastURL {
                 XCTAssert(sessionUrl == url)
             }
@@ -46,7 +46,7 @@ final class MockNetworkManagerTests: XCTestCase {
         
         let request = Request(path: "https://mockurl", method: .get, contentType: "application/json", headerParams: nil, type: .cats, body: nil)
         
-        networkManager.execute(request: request, completion: { (result: (Result<[CatBreed], NetworkError>)) in
+        networkManager.execute(request: request, completion: { (result: (Result<[CatBreedModel], NetworkError>)) in
             
         })
         

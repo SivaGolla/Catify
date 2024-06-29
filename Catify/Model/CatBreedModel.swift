@@ -1,5 +1,5 @@
 //
-//  CatBreed.swift
+//  CatBreedModel.swift
 //  Catify
 //
 //  Created by Venkata Sivannarayana Golla on 20/06/24.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - CatBreed
-struct CatBreed: Codable {
+// MARK: - CatBreedModel
+struct CatBreedModel: Codable {
     let weight: CatWeight?
     let id: String
     let name: String
@@ -27,7 +27,7 @@ struct CatBreed: Codable {
     let wikipediaURL: String?
     let hypoallergenic: Int?
     let referenceImageID: String?
-    let image: CatImage?
+    let image: CatImageModel?
     
     enum CodingKeys: String, CodingKey {
         case weight, id, name
@@ -62,8 +62,8 @@ struct CatBreed: Codable {
     }
 }
 
-// MARK: - CatImage
-struct CatImage: Codable {
+// MARK: - CatImageModel
+struct CatImageModel: Codable {
     let id: String?
     let width, height: Int?
     let url: String?

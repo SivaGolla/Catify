@@ -27,7 +27,7 @@ class CatsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "LoadCatDetails" {
             
-            let viewModel = ACatDetailViewModel(model: (sender as! CatBreed))
+            let viewModel = ACatDetailViewModel(model: (sender as! CatBreedModel))
             let destinationViewController = segue.destination as! ACatDetailViewController
             destinationViewController.viewModel = viewModel
         }
@@ -126,7 +126,7 @@ extension CatsViewController: UITableViewDataSource, UITableViewDelegate, UITabl
 }
 
 extension CatsViewController: CatTableViewCellDelegate {
-    func toggleFavButton(favID: String?, catBreed: CatBreed, type: FavOpType) {
+    func toggleFavButton(favID: String?, catBreed: CatBreedModel, type: FavOpType) {
         viewModel.toggleFavourite(favID: favID, catBreed: catBreed, type: type)
     }
 }

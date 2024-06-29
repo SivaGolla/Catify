@@ -51,9 +51,9 @@ final class ACatDetailViewModel {
         String(format: "Temperament: %@", model.temperament ?? "")
     }
 
-    private let model: CatBreed
+    private let model: CatBreedModel
 
-    init(model: CatBreed) {
+    init(model: CatBreedModel) {
         self.model = model
     }
 

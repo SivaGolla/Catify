@@ -64,7 +64,7 @@ class CatsViewModel {
         let urlSearchParams = ServiceRequestModel(limit: nil, page: nil, favId: nil)
         fetchCatsServiceRequest.urlSearchParams = urlSearchParams
         
-        let completion: (Result<[CatBreed], NetworkError>) -> Void = { [weak self] result in
+        let completion: (Result<[CatBreedModel], NetworkError>) -> Void = { [weak self] result in
             
             switch result {
             case .success(let catList):
@@ -138,7 +138,7 @@ class CatsViewModel {
         }
     }
     
-    func toggleFavourite(favID: String?, catBreed: CatBreed, type: FavOpType) {
+    func toggleFavourite(favID: String?, catBreed: CatBreedModel, type: FavOpType) {
         guard let favID = favID,
               !favID.isEmpty,
               let imageID = catBreed.referenceImageID,

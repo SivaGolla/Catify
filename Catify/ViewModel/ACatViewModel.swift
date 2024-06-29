@@ -9,7 +9,7 @@ import Foundation
 
 final class ACatViewModel {
     
-    let model: CatBreed
+    let model: CatBreedModel
 
     var name: String {
         model.name
@@ -20,7 +20,7 @@ final class ACatViewModel {
     
     var modelDidChange: (() -> Void)?
     
-    init(model: CatBreed) {
+    init(model: CatBreedModel) {
         self.model = model
     }
 }

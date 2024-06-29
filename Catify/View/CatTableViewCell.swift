@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CatTableViewCellDelegate: AnyObject {
-    func toggleFavButton(favID: String?, catBreed: CatBreed, type: FavOpType)
+    func toggleFavButton(favID: String?, catBreed: CatBreedModel, type: FavOpType)
 }
 
 class CatTableViewCell: UITableViewCell {
